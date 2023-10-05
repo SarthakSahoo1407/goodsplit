@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:goodsplit/custom_textfield.dart';
+import 'package:goodsplit/screens/homeScreen.dart';
+import 'package:goodsplit/screens/signup_screen.dart';
 import 'package:goodsplit/services/auth_services.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -19,6 +21,12 @@ class _LoginScreenState extends State<LoginScreen> {
       context: context,
       email: emailController.text,
       password: passwordController.text,
+    );
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const HomeScreen1(),
+      ),
     );
   }
 
@@ -79,13 +87,13 @@ class _LoginScreenState extends State<LoginScreen> {
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           TextButton(
             onPressed: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const LoginScreen(),
+                  builder: (context) => const SignupScreen(),
                 ),
               );
             },

@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(authRouter);
 
-const db = "mongodb+srv://sarthaksahoo1520:Jb8u70o7K9uyvfdz@cluster0.50bqchx.mongodb.net/?retryWrites=true&w=majority";
+const db = "";
 mongoose
     .connect(db)
     .then(()=> console.log("MongoDB connected"))
@@ -21,7 +21,6 @@ app.listen(PORT, "0.0.0.0", ()=>{
     console.log(`connected at port ${PORT}`);
 
 });
-
 
 
 // Jb8u70o7K9uyvfdz

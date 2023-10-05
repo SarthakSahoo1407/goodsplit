@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goodsplit/providers/user_provider.dart';
-import 'package:goodsplit/screens/home_screen.dart';
+import 'package:goodsplit/screens/homeScreen.dart';
 import 'package:goodsplit/screens/signup_screen.dart';
 import 'package:goodsplit/services/auth_services.dart';
 import 'package:provider/provider.dart';
@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Provider.of<UserProvider>(context).user.token.isEmpty
           ? const SignupScreen()
-          : const HomeScreen(),
+          : const HomeScreen1(),
     );
   }
 }

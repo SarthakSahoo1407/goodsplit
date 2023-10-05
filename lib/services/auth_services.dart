@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:goodsplit/models/user.dart';
 import 'package:goodsplit/providers/user_provider.dart';
-import 'package:goodsplit/screens/home_screen.dart';
+import 'package:goodsplit/screens/homeScreen.dart';
 import 'package:goodsplit/screens/signup_screen.dart';
 import 'package:goodsplit/utils/constants.dart';
 import 'package:goodsplit/utils/utils.dart';
@@ -79,7 +79,7 @@ class AuthService {
           await prefs.setString('x-auth-token', jsonDecode(res.body)['token']);
           navigator.pushAndRemoveUntil(
             MaterialPageRoute(
-              builder: (context) => const HomeScreen(),
+              builder: (context) => const HomeScreen1(),
             ),
             (route) => false,
           );
@@ -140,4 +140,9 @@ class AuthService {
       (route) => false,
     );
   }
+
+  void createGroup(
+      {required BuildContext context,
+      required String title,
+      required String total}) {}
 }
